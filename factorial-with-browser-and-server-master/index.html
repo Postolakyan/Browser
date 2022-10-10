@@ -1,0 +1,54 @@
+<html lang="en">
+<head>
+    <meta charset="UTF-8">
+    <meta http-equiv="X-UA-Compatible" content="IE=edge">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>Document</title>
+</head>
+<body>
+    
+
+    <input type="text" placeholder="Enter number">
+    <input type="button" value="send" id="btn">
+    
+    <script>
+        let btn = document.getElementById("btn");
+
+        btn.onclick = function(){
+            alert(httpGet())
+        }
+        
+
+       function httpGet(){
+            const val = document.querySelector('input').value;
+            var xmlHttp = new XMLHttpRequest();
+            xmlHttp.open( "GET", 'http://localhost:4444/' + val, false );
+            xmlHttp.send( null );
+            return xmlHttp.responseText;
+            }
+
+        
+        
+        // let text = "<table border='1px'>"
+        // for(let i = 0; i <= 15; i++){
+        // text += "<tr  height = '30px' width = '30px'>";
+        // for(let j = 0; j <= 15; j++){
+            
+        //     if((d === 1 || d === 2) || d === 3){
+        //         text += "<td bgcolor ='#AFB2A3' height = '30px' width = '30px'>"
+        //     } else if ((d === 4 || d === 5) || d === 6){
+        //         text += "<td bgcolor = '#B29462' height = '30px' width = '30px'>"
+        //     } else {
+        //         text += "<td bgcolor = '#4095B5'  height = '30px' width = '30px'>"
+        //     } 
+        //     text += "</td>";
+        //     }
+        //     text += "</tr>"
+        // }
+
+        // text+= "</table>"
+
+        // document.write(text)
+    </script>
+</body>
+</html>
